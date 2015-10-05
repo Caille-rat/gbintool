@@ -1,0 +1,21 @@
+plugins {
+    id 'groovy'
+    id 'com.github.johnrengelman.shadow' version '1.2.2'
+}
+
+group 'fr.uvsq.doosa'
+
+apply plugin: 'groovy'
+apply plugin: 'application'
+mainClassName = 'fr.uvsq.doosa.gbintool.Main'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile 'org.codehaus.groovy:groovy-all:2.4.5'
+    testCompile group: 'junit', name: 'junit', version: '4.+'
+}
